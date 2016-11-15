@@ -1,0 +1,49 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+1
+CMakeCCompilerId.c:2:3: error: #error "A C++ compiler has been selected for C."
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -c
+
+The output was:
+1
+CMakeCCompilerId.c:2:3: error: #error "A C++ compiler has been selected for C."
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -Aa
+
+The output was:
+1
+<command-line>:0:1: error: missing '(' after predicate
+CMakeCCompilerId.c:2:3: error: #error "A C++ compiler has been selected for C."
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+cc: fatal error: no input files
+compilation terminated.
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/zhang_jhon/kinfu_remake/apps/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3390459516/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3390459516.dir/build.make CMakeFiles/cmTryCompileExec3390459516.dir/build
+make[1]: Entering directory `/home/zhang_jhon/kinfu_remake/apps/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/zhang_jhon/kinfu_remake/apps/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3390459516.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3390459516.dir/testCCompiler.c.o   -c /home/zhang_jhon/kinfu_remake/apps/CMakeFiles/CMakeTmp/testCCompiler.c
+/home/zhang_jhon/kinfu_remake/apps/CMakeFiles/CMakeTmp/testCCompiler.c:2:3: error: #error "The CMAKE_C_COMPILER is set to a C++ compiler"
+make[1]: Leaving directory `/home/zhang_jhon/kinfu_remake/apps/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3390459516.dir/testCCompiler.c.o] Error 1
+make: *** [cmTryCompileExec3390459516/fast] Error 2
+
+

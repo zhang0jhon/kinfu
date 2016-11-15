@@ -14,12 +14,12 @@ kfusion::KinFuParams kfusion::KinFuParams::default_params()
 
     KinFuParams p;
 
-    p.cols = 640;  //pixels
-    p.rows = 480;  //pixels
+    p.cols = 150;//512;  //pixels
+    p.rows = 150;//424;  //pixels
     p.intr = Intr(525.f, 525.f, p.cols/2 - 0.5f, p.rows/2 - 0.5f);
 
-    p.volume_dims = Vec3i::all(512);  //number of voxels
-    p.volume_size = Vec3f::all(3.f);  //meters
+    p.volume_dims = Vec3i::all(1024);  //number of voxels
+    p.volume_size = Vec3f::all(1.0f);  //meters
     p.volume_pose = Affine3f().translate(Vec3f(-p.volume_size[0]/2, -p.volume_size[1]/2, 0.5f));
 
     p.bilateral_sigma_depth = 0.04f;  //meter

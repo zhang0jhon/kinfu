@@ -1,0 +1,2 @@
+/home/zhang_jhon/kinfu_remake/build/apps/CMakeFiles/demo.dir
+/home/zhang_jhon/kinfu_remake/build/kfusion/CMakeFiles/kfusion.dir

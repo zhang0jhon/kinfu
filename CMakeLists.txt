@@ -15,10 +15,10 @@ include(cmake/Utils.cmake)
 include(cmake/Targets.cmake)
 
 # ---[ find dependencies
-find_package(OpenCV 2.4.8 REQUIRED COMPONENTS core viz highgui)
+find_package(OpenCV 2.4.8 REQUIRED COMPONENTS core viz highgui imgcodecs)
 find_package(CUDA 5.0 REQUIRED)
 find_package(OpenNI REQUIRED)
-include_directories(${OpenCV_INCLUDE_DIRS} ${CUDA_INCLUDE_DIRS} ${OPENNI_INCLUDE_DIR})
+include_directories(${OpenCV_INCLUDE_DIRS} ${CUDA_INCLUDE_DIRS} ${OPENNI_INCLUDE_DIR}${PCL_INCLUDE_DIRS} )
 
 # ---[ misc settings
 if(USE_PROJECT_FOLDERS)
@@ -28,8 +28,8 @@ endif()
 
 # ---[ cuda settings
 set(HAVE_CUDA 1)
-#list(APPEND CUDA_NVCC_FLAGS "-arch;compute_20")
-list(APPEND CUDA_NVCC_FLAGS "-gencode;arch=compute_20,code=sm_20;-gencode;arch=compute_20,code=sm_21;-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35")
+#list(APPEND CUDA_NVCC_FLAGS "-arch;compute_52")
+list(APPEND CUDA_NVCC_FLAGS "-gencode;arch=compute_52,code=sm_52;-gencode;arch=compute_20,code=sm_21;-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35")
 
 if(UNIX OR APPLE)
   list(APPEND CUDA_NVCC_FLAGS "-Xcompiler;-fPIC;")
