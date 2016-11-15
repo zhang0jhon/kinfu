@@ -1,6 +1,6 @@
 Kinfu implementation for Lock3DFace
 ----------
-#Dependencies:
+Dependencies:
 * cuda
 * opencv with Viz module(VTK)
 * OpenNI
